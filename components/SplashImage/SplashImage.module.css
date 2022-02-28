@@ -1,0 +1,4 @@
+.maskImage {
+  -webkit-mask-image: url("yellow-splash.svg");
+  mask-image: url("yellow-splash.svg");
+}
