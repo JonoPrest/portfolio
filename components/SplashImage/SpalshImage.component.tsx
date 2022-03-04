@@ -15,7 +15,7 @@ const SplashImage: FC<ISplashImageProps> = ({ className }) => {
       <div className="absolute">
         <Image src={svgImage} alt="Yellow background splash" />
       </div>
-      <div className={`${styles.maskImage}`}>
+      <div className={`${styles.maskImage} `}>
         <Image
           quality={100}
           src={profilePic}

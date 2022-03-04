@@ -8,6 +8,10 @@ module.exports = {
       colors: {
         primary: "#FDC435",
       },
+      height: {
+        128: "32rem",
+        256: "64rem",
+      },
     },
   },
   plugins: [],

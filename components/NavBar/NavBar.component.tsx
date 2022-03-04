@@ -3,7 +3,7 @@ import React, { FC, useState } from "react";
 const NavBar: FC = () => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 lg:px-20 sticky top-0 left-0 right-0 z-10">
+    <nav className="flex items-center justify-between flex-wrap p-6 lg:px-20 absolute top-0 left-0 right-0 z-10">
       <div className="flex items-center flex-shrink-0 mr-6">
         <span className="font-semibold text-xl tracking-tight">Jono Prest</span>
       </div>
@@ -31,7 +31,7 @@ const NavBar: FC = () => {
             About
           </a>
           <a
-            href="#responsive-header"
+            href="#projects"
             className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow mr-4"
           >
             Projects
