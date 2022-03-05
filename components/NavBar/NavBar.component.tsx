@@ -36,10 +36,7 @@ const NavBar: FC = () => {
             </a>
           </Link>
           <Link href="/contact">
-            <a
-              href="/contact"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow"
-            >
+            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow">
               Contact
             </a>
           </Link>
