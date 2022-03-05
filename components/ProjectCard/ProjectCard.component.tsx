@@ -3,6 +3,7 @@ import React, { FC } from "react";
 
 import imageSrc from "./Rectangle 7.png";
 import styles from "./ProjectCard.module.css";
+import CustomButton from "../CustomButton/CustomButton.component";
 
 interface IProjectCardProps {
   invert?: boolean;
@@ -40,9 +41,9 @@ const ProjectCard: FC<IProjectCardProps> = ({ invert }) => {
           magni soluta.
         </p>
 
-        <button className="border border-black hover:bg-primary  hover:border-primary hover:text-white font-bold py-2 px-4 rounded-full">
+        <CustomButton color="transparent" round>
           View Project
-        </button>
+        </CustomButton>
       </div>
     </div>
   );

@@ -1,11 +1,28 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import CustomButton from "../components/CustomButton/CustomButton.component";
 import Footer from "../components/Footer/Footer.component";
 import NavBar from "../components/NavBar/NavBar.component";
 import ProjectCard from "../components/ProjectCard/ProjectCard.component";
 import SplashImage from "../components/SplashImage/SpalshImage.component";
 
 const Home: NextPage = () => {
+  const sendEmail = () => {
+    fetch("api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify({
+        message: "hello jono",
+        name: "Ted",
+      }),
+    })
+      .then((res) => res.json)
+      .then(console.log)
+      .catch(console.error);
+  };
   return (
     <div>
       <Head>
@@ -37,12 +54,10 @@ const Home: NextPage = () => {
                 molestiae repellat voluptatibus, obcaecati quae!
               </p>
               <div>
-                <button className="bg-primary hover:drop-shadow py-2 px-4 border border-primary rounded">
-                  Projects
-                </button>
-                <button className="m-2 bg-transparent hover:bg-primary transition font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded tra">
+                <CustomButton>Projects</CustomButton>
+                <CustomButton className="m-2" color="transparent">
                   Linked In
-                </button>
+                </CustomButton>
               </div>
             </div>
           </div>
@@ -58,6 +73,12 @@ const Home: NextPage = () => {
             <ProjectCard />
             <ProjectCard invert />
             <ProjectCard />
+            <button
+              onClick={sendEmail}
+              className="m-2 bg-transparent hover:bg-primary transition font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded tra"
+            >
+              send email
+            </button>
           </div>
         </section>
       </main>

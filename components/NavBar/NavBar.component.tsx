@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { FC, useState } from "react";
 
 const NavBar: FC = () => {
@@ -24,24 +25,24 @@ const NavBar: FC = () => {
       </div>
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end ">
         <div className={"text-sm lg:block" + (expanded ? "" : " hidden")}>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow mr-4"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow mr-4"
-          >
-            Projects
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow"
-          >
-            Contact
-          </a>
+          <Link href="/">
+            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow mr-4">
+              About
+            </a>
+          </Link>
+          <Link href="/#projects">
+            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow mr-4">
+              Projects
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a
+              href="/contact"
+              className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow"
+            >
+              Contact
+            </a>
+          </Link>
         </div>
       </div>
     </nav>
