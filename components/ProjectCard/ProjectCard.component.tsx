@@ -1,15 +1,33 @@
+// Modules
+import React, { FC, ReactNode } from "react";
 import Image from "next/image";
-import React, { FC } from "react";
+import Link from "next/link";
 
-import imageSrc from "./Rectangle 7.png";
-import styles from "./ProjectCard.module.css";
+// Components
 import CustomButton from "../CustomButton/CustomButton.component";
 
+// Assets and styling
+import styles from "./ProjectCard.module.css";
+import CustomTag from "../CustomTag/CustomTag.component";
+
 interface IProjectCardProps {
+  imageSrc: any;
+  title: string;
+  href?: string;
+  customButton?: ReactNode;
   invert?: boolean;
+  techArr?: Array<string>;
 }
 
-const ProjectCard: FC<IProjectCardProps> = ({ invert }) => {
+const ProjectCard: FC<IProjectCardProps> = ({
+  invert,
+  imageSrc,
+  href,
+  children,
+  customButton,
+  title,
+  techArr,
+}) => {
   return (
     <div
       className={
@@ -33,17 +51,27 @@ const ProjectCard: FC<IProjectCardProps> = ({ invert }) => {
         />
       </div>
       <div className="order-2 w-full h-full p-10 flex flex-col justify-center items-start grow">
-        <h1 className="text-5xl font-medium">Project Name</h1>
-        <p className="my-8 text-gray-400">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
-          ab molestiae exercitationem. Magnam pariatur libero eos eum vel in,
-          alias illum veniam fugiat id corporis labore exercitationem dolorum
-          magni soluta.
-        </p>
-
-        <CustomButton color="transparent" round>
-          View Project
-        </CustomButton>
+        <h1 className="text-5xl font-medium">{title}</h1>
+        {techArr && (
+          <div className="mt-8 flex flex-wrap gap-2">
+            <h5 className="text-gray-400 font-bold">TECH:</h5>
+            {techArr.map((item, i) => (
+              <CustomTag key={i} color="primary">
+                {item}
+              </CustomTag>
+            ))}
+          </div>
+        )}
+        <p className="my-8 text-gray-400 text-lg">{children}</p>
+        {customButton ? (
+          customButton
+        ) : (
+          <Link href={href || "/"} passHref>
+            <CustomButton color="transparent" round>
+              View Project
+            </CustomButton>
+          </Link>
+        )}
       </div>
     </div>
   );

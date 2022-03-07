@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#FDC435",
+        success: "#5cb85c",
+        failure: "#ed4337",
       },
       height: {
         128: "32rem",

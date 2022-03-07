@@ -1,12 +1,15 @@
-import Link from "next/link";
+// Modules
 import React, { FC, useState } from "react";
+import Link from "next/link";
 
 const NavBar: FC = () => {
   const [expanded, setExpanded] = useState(false);
   return (
     <nav className="flex items-center justify-between flex-wrap p-6 lg:px-20 absolute top-0 left-0 right-0 z-10">
       <div className="flex items-center flex-shrink-0 mr-6">
-        <span className="font-semibold text-xl tracking-tight">Jono Prest</span>
+        <Link href="/">
+          <a className="font-semibold text-xl tracking-tight">Jono Prest</a>
+        </Link>
       </div>
       <div className="block lg:hidden">
         <button

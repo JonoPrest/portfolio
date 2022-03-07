@@ -2,7 +2,7 @@
 
 This is a small demo project for you to have a look at my code. Please feel free to poke around, any feedback is welcome.
 
-<img src="https://c.tenor.com/O2goPYhULw0AAAAC/come-in-come-on-in.gif" alt="Come on in!" width="600px">
+<img src="https://c.tenor.com/O2goPYhULw0AAAAC/come-in-come-on-in.gif" alt="Come on in!" width="400px">
 
 ### About the Application
 

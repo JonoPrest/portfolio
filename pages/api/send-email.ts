@@ -4,6 +4,7 @@ import nodemailer, { SendMailOptions, Transporter } from "nodemailer";
 
 type Data = {
   message: string;
+  success: boolean;
 };
 
 export type emailMessageRequestData = {
@@ -17,6 +18,7 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   const body: emailMessageRequestData = req.body;
+
   const transporter: Transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -45,32 +47,21 @@ export default function handler(
     text: "Hi there,\n\nThanks so much for getting in touch.\n\n This is just an automated message to say your email was received and I will get back to you as soon as possible.\n\nKind regards,\nJono Prest",
   };
 
-  transporter.sendMail(mail, (err, info) => {
-    if (err) {
+  transporter
+    .sendMail(mail)
+    .then((info) => {
+      console.log(info);
+      return transporter.sendMail(autoResponder);
+    })
+    .then((info) => {
+      console.log(info);
+      transporter.close();
+      res.status(200).json({ success: true, message: "Successfully Sent" });
+    })
+    .catch((err) => {
       console.error(err);
-    } else {
-      // see https://nodemailer.com/usage
-      console.log("info.messageId: " + info.messageId);
-      console.log("info.envelope: " + info.envelope);
-      console.log("info.accepted: " + info.accepted);
-      console.log("info.rejected: " + info.rejected);
-      console.log("info.pending: " + info.pending);
-      console.log("info.response: " + info.response);
-    }
-  });
-  transporter.sendMail(autoResponder, (err, info) => {
-    if (err) {
-      console.error(err);
-    } else {
-      // see https://nodemailer.com/usage
-      console.log("info.messageId: " + info.messageId);
-      console.log("info.envelope: " + info.envelope);
-      console.log("info.accepted: " + info.accepted);
-      console.log("info.rejected: " + info.rejected);
-      console.log("info.pending: " + info.pending);
-      console.log("info.response: " + info.response);
-    }
-  });
-  transporter.close();
-  res.status(200).json({ message: "John Doe" });
+
+      transporter.close();
+      res.status(500).send({ success: false, message: err.message });
+    });
 }

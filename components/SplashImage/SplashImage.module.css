@@ -1,6 +1,21 @@
+.imageContainer {
+  position: relative;
+  width: 720px;
+  max-width: 100vw;
+  /* height: 629px; */
+
+  /* padding-top: calc(629 / 720 * 100%); */
+  /* max-height: calc(629vw / 720 * 100); */
+}
+
 .maskImage {
-  /* position: static; */
+  position: static;
   -webkit-mask-image: url("yellow-splash.svg");
   mask-image: url("yellow-splash.svg");
-  mask-position: 0 0;
+  mask-size: contain;
+  /* mask-position: 0 0; */
+  width: 100%;
+  /* height: 100%; */
+
+  padding-top: calc(629 / 720 * 100%);
 }
