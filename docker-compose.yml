@@ -4,6 +4,7 @@ services:
   nextjs_portfolio:
     container_name: portfolio
     build: ./
+    image: jonoprest/portfolio
     working_dir: /app
     command: node server.js
     ports:
