@@ -36,7 +36,7 @@ const ProjectCard: FC<IProjectCardProps> = ({
     <div
       id={id}
       className={
-        "bg-white drop-shadow-xl w-full  h-256 my-10 flex flex-col items-center lg:w-11/12 lg:h-128 lg:flex-row  max-h-screen rounded-3xl " +
+        "bg-white drop-shadow-xl w-full  h-256 my-10 flex flex-col items-center lg:w-11/12 lg:h-128 lg:flex-row  rounded-3xl " +
         styles.projectCardContainer
       }
     >

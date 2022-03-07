@@ -22,7 +22,7 @@ const NextInt: NextPage = () => {
       <NavBar />
 
       <Link href="/#NextInt-Reporting">
-        <a className="absolute flex left-6 lg:left-20 top-32 hover:drop-shadow">
+        <a className="relative mb-8 flex left-6 lg:left-20 top-32 hover:drop-shadow">
           <ChevronLeft />
           <span>BACK</span>
         </a>
@@ -30,7 +30,7 @@ const NextInt: NextPage = () => {
       <Heading1>Next Integration Reporting</Heading1>
       <main className="flex flex-col items-center max-w-6xl mt-8 m-auto bg-white drop-shadow-xl">
         <div className="relative flex flex-col lg:flex-row">
-          <div className="realtive flex flex-col w-full grow m-10">
+          <div className="realtive flex flex-col w-full grow p-10">
             <Paragraph className="mb-0">
               In this project I built and designed an email system, serverless
               data handler and report generator using AWS SES, SNS, LAMBDA and

@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
       <NavBar />
       <Link href="/">
-        <a className="absolute flex left-6 lg:left-20 top-32 hover:drop-shadow">
+        <a className="relative mb-8 flex left-6 lg:left-20 top-32 hover:drop-shadow">
           <ChevronLeft />
           <span>BACK</span>
         </a>
