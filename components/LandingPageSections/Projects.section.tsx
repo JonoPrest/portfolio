@@ -39,11 +39,12 @@ const Projects: FC = () => {
             </a>
           }
         >
-          This website is a server side rendered Next.js application written in
-          TypeScript and Tailwind CSS. It contains an API for managing the email
-          handling on the contact page. It is running in a docker container and
-          it is currently being served to you via an EC2 instance on AWS. Take a
-          look at the source code on GitHub.
+          The website you are currently looking at is a server side rendered
+          Next.js application written in TypeScript and Tailwind CSS. It
+          contains an API for managing the email handling on the contact page.
+          It is running in a docker container and it is currently being served
+          to you via an EC2 instance on AWS. Take a look at the source code on
+          GitHub.
         </ProjectCard>
         <ProjectCard
           id="RocketHour-LMS"
@@ -61,7 +62,7 @@ const Projects: FC = () => {
           ]}
           href="/projects/RocketHour-LMS"
         >
-          I designed and developed a system used by{" "}
+          I developed a system used by{" "}
           <a
             className="text-blue-600"
             href="https://thinkcamp.co.za/"
@@ -72,9 +73,10 @@ const Projects: FC = () => {
           </a>
           {`'`}s Online Code Tutoring platform for children and teens called
           &quot;RocketHour&quot;. The RocketHour &quot;LaunchPad&quot; is a
-          custom LMS that is geared towards teaching to a live online classroom.
-          Students login and navigate through their interactive lessons while
-          tutors receive live feedback on their students throughout the lesson.
+          custom Learning Management System that is geared towards teaching a
+          live online class. Students log in and navigate through interactive
+          lessons while tutors receive live feedback on their students progress
+          throughout the lesson.
         </ProjectCard>
 
         <ProjectCard
@@ -100,17 +102,17 @@ const Projects: FC = () => {
           >
             Next Integration{" "}
           </a>
-          that integrates with a number of machines on a cement mixing plant. It
-          queries multiple databases, performs data cleaning and merges them
+          that interfaces with a number of machines on a cement mixing plant. It
+          queries multiple databases, performs data cleaning, and merges them
           into single dataframe where it gets summariesd. It then gets marked up
-          in reportlab and sent as an attched pdf via email.
+          in ReportLab and sent as an attached pdf via email.
         </ProjectCard>
         <ProjectCard
           invert
           id="LHE"
           href="/projects/LHE"
           title="Local Healthy Ethical Ordering Platform"
-          imageSrc="https://jonoprest.s3.af-south-1.amazonaws.com/images/lhe_landing_pg_thumbnail.png"
+          imageSrc="https://jonoprest.s3.af-south-1.amazonaws.com/images/lhe/lhe_landing_pg_thumbnail.jpg"
           techArr={["React", "Bootstrap", "Redux", "Firebase", "Express.js"]}
         >
           I designed and developed a platform for{" "}
@@ -122,9 +124,10 @@ const Projects: FC = () => {
           >
             Local Healthy Ethical{" "}
           </a>
-          to automate the management of collecting members&apos; orders through
-          a sign in shop and for placing orders with distributors. It also
-          provides an interface to generate/edit invoices send to customers.
+          to automate the collection of members&apos; orders through a sign in
+          shop, and for administrators to place orders with distributors. It
+          also provides an interface to generate and edit invoices send to
+          customers.
         </ProjectCard>
       </div>
     </section>

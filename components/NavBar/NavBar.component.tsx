@@ -29,17 +29,17 @@ const NavBar: FC = () => {
       <div className="w-full flex flex-grow lg:flex lg:items-center lg:w-auto justify-end ">
         <div className={"text-sm lg:block" + (expanded ? "" : " hidden")}>
           <Link href="/about">
-            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow  hover:border-b border-black mr-4">
+            <a className="text-lg block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow  hover:border-b border-black mr-4">
               About
             </a>
           </Link>
           <Link href="/#projects">
-            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow  hover:border-b border-black mr-4">
+            <a className="text-lg block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow  hover:border-b border-black mr-4">
               Projects
             </a>
           </Link>
           <Link href="/contact">
-            <a className="block mt-4 lg:inline-block lg:mt-0  hover:border-b border-black hover:drop-shadow">
+            <a className="text-lg block mt-4 lg:inline-block lg:mt-0  hover:border-b border-black hover:drop-shadow">
               Contact
             </a>
           </Link>

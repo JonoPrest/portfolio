@@ -22,7 +22,7 @@ const Header: FC = () => {
           </Heading2>
           <Paragraph className="max-w-md">
             I am an enthusiastic, passionate and hardworking individual. I am
-            stimulated by impactful work and love problem-solving.
+            stimulated by impactful work, and love problem-solving.
           </Paragraph>
 
           <Paragraph className="max-w-md">

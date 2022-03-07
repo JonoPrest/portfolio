@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  nextjs_portfolio:
+    container_name: portfolio
+    build: ./
+    working_dir: /app
+    command: node server.js
+    ports:
+      - "3000:3000"
+    environment:
+      - MY_GMAIL_USERNAME
+      - MY_OAUTH_CLIENT_ID
+      - MY_OAUTH_CLIENT_SECRET
+      - MY_OAUTH_REFRESH_TOKEN
+      - MY_OAUTH_ACCESS_TOKEN

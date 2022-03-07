@@ -53,7 +53,7 @@ const RocketHour: NextPage = () => {
             >
               Local Healthy Ethical{" "}
             </a>{" "}
-            food club. The platform uses React, Bootstrap, Redux and Firebase in
+            Food Club. The platform uses React, Bootstrap, Redux and Firebase in
             the tech stack.
           </Paragraph>
           <div className="flex gap-5 px-10">
@@ -88,7 +88,7 @@ const RocketHour: NextPage = () => {
             Users can sign in and place orders on the platform. These orders are
             collected and mapped in an administrative dashboard where they get
             grouped and emailed off to the various distributers associated with
-            the foodclub.
+            the Food Club.
           </Paragraph>
           <div className="relative w-full" style={{ paddingTop: "50%" }}>
             <Image
@@ -105,9 +105,9 @@ const RocketHour: NextPage = () => {
         </div>
         <div className="flex flex-col w-full max-w my-8 ">
           <Paragraph className="m-10">
-            Once orders are complete and all collections/deliveries have
-            happened. There is an interface for generating and editing invoices
-            for customers and sending them.
+            Once orders are complete, administrators make use of the management
+            console for generating, editing, and sending invoices to the
+            members.
           </Paragraph>
           <div className="flex gap-5 px-10">
             <div className="relative w-1/2" style={{ paddingTop: "48%" }}>

@@ -6,7 +6,7 @@ interface IParagraphProps {
 
 const Paragraph: FC<IParagraphProps> = ({ children, className }) => {
   return (
-    <p className={"my-8 text-gray-400 text-lg " + className}>{children}</p>
+    <p className={"my-8 text-gray-500 text-lg " + className}>{children}</p>
   );
 };
 

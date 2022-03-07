@@ -43,10 +43,9 @@ const RocketHour: NextPage = () => {
           <Paragraph className="m-10">
             This application uses React, Redux, Material UI and Firebase. For
             students it provides a sign in system that gives them access to
-            their class and lessons. Lessons consist of a series of challenge
-            pages which contain checklists of instructions as well as embeds for
-            scratch projects, replit terminals, construct games and explanation
-            videos, images and gifs.
+            their lessons. Lessons consist of a series of challenge pages which
+            contain instruction cehcklists, embeds for Scratch projects, Replit
+            terminals, Construct games and explanation videos, images and gifs.
           </Paragraph>
           <div className="relative w-full" style={{ paddingTop: "57%" }}>
             <Image
@@ -63,15 +62,14 @@ const RocketHour: NextPage = () => {
         </div>
         <div className="flex flex-col w-full max-w mt-8">
           <Paragraph className="m-10">
-            Lessons are taught in classes in real time on Discord by tutors. For
-            tutors the LMS provides a live feedback system from the students
-            with live progress updates showing which challenge they are on and
-            for how long. It also integrates a reporting system where feedback
-            is submitted on every lesson and with a message for every student.
-            These messages get sent out to parents daily. Tutors can also flag
-            students with various alerts and lesson progress is recorded per
-            student. API calls are managed and authenticated using serverless
-            google functions.
+            Lessons are taught by tutors in real time, using class groups on
+            Discord. For tutors, the LMS provides a live feedback system with
+            progress updates showing which challenge students are on and for how
+            long. It also integrates a reporting system where feedback is
+            submitted on every lesson. Comments on how the student has done are
+            sent to parents daily. Tutors can also flag students with various
+            alerts and lesson progress is recorded per student. API calls are
+            managed and authenticated using serverless google functions.
           </Paragraph>
           <div className="relative w-full" style={{ paddingTop: "57%" }}>
             <Image
@@ -92,13 +90,13 @@ const RocketHour: NextPage = () => {
             project as students also submit a simple feedback form after every
             lesson. These tutor and student feedback entries compile into a
             single entry where support managers have alerts for negative
-            feedback or flags to be followed up with daily. The stats on student
+            feedback or flags to be followed up on daily. The stats on student
             progress and flags allow the team to measure student performance
             against every other student who completed the same lesson and can
-            quickly help diagnose if a student should be moved up or down a
-            level for example. The lesson development team also uses these
-            statistics and feedback to adjust lessons until they are at the
-            appropriate level.
+            quickly help diagnose issues and relevent solutions. For example, it
+            would highlight if a student should be moved up or down a level. The
+            lesson development team also uses these statistics and feedback to
+            adjust lessons until they are at the appropriate level.
           </Paragraph>
           <div className="relative w-full" style={{ paddingTop: "30%" }}>
             <Image

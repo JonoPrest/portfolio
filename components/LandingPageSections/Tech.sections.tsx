@@ -53,7 +53,6 @@ const Tech: FC = () => {
               {item}
             </CustomTag>
           ))}
-          ,
         </div>
       </div>
     </section>

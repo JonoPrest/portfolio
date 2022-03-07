@@ -13,7 +13,7 @@ const CustomTag: FC<ICustomTagProps> = ({ children, color }) => {
 
   return (
     <span
-      className={`inline-flex items-center justify-center px-2 py-1 mr-2 text-s font-bold leading-none text-white ${bgColor[color]} rounded-full`}
+      className={`inline-flex items-center justify-center px-2 py-1 mr-2 text-s font-bold leading-none text-white ${bgColor[color]} rounded`}
     >
       {children}
     </span>

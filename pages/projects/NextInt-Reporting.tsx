@@ -34,21 +34,22 @@ const NextInt: NextPage = () => {
             <Paragraph className="mb-0">
               In this project I built and designed an email system, serverless
               data handler and report generator using AWS SES, SNS, LAMBDA and
-              S3. Written using Python, Pandas, Reportlab.
+              S3. The Lambda function was written using Python, Pandas and
+              ReportLab.
             </Paragraph>
             <Paragraph className="mb-0">
-              The job was to design and build an integration for a third party
-              mining company’s cement mixing process. The various machines were
-              linked up to Ewon modems and they were recording data points in
-              isolated databases.
+              The project set out to design and build an integration for a third
+              party mining company’s cement mixing process. The various machines
+              on the plants were linked up to Ewon modems and they were
+              recording data points in isolated databases.
             </Paragraph>
             <Paragraph>
-              The integration I built is triggered with an email request, it
-              then draws data from the individual databases, it uses pandas to
-              isolate the requested data and manages data cleaning. It then
-              merges them into a single dataframe, creates summaries and formats
-              into a pdf report using report lab and finally goes on to send
-              this via email to the various required parties.
+              The integration I built draws data from these individual databases
+              and is triggered with an email request. It uses Pandas to isolate
+              the requested data and manages data cleaning. It then merges them
+              into a single dataframe, creates summaries, and lastly formats it
+              into a pdf report using ReportLab. This is sent as an attached pdf
+              via email to the required parties.
             </Paragraph>
           </div>
           <div className="relative w-full">
