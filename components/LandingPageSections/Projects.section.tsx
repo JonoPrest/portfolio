@@ -4,14 +4,13 @@ import React, { FC } from "react";
 // Components
 import CustomButton from "../CustomButton/CustomButton.component";
 import ProjectCard from "../ProjectCard/ProjectCard.component";
+import Heading1 from "../Typorgraphy/Heading1.component";
 
 const Projects: FC = () => {
   return (
     <section id="projects">
-      <div className="w-full flex flex-col items-center pt-32 pb-10">
-        <h1 className="relative text-5xl font-semibold">Projects</h1>
-        <mark className="w-24 border-b-4 border-primary m-4" />
-      </div>
+      <Heading1> Projects</Heading1>
+
       <div className="w-full flex flex-col items-center ">
         <ProjectCard
           imageSrc={
@@ -47,9 +46,10 @@ const Projects: FC = () => {
           look at the source code on GitHub.
         </ProjectCard>
         <ProjectCard
+          id="RocketHour-LMS"
           invert
           title="RocketHour LMS"
-          imageSrc="https://jonoprest.s3.af-south-1.amazonaws.com/images/rockethour_thumbnail.png"
+          imageSrc="https://jonoprest.s3.af-south-1.amazonaws.com/images/rockethour/rockethour_thumbnail.png"
           techArr={[
             "React",
             "Redux",
@@ -59,6 +59,7 @@ const Projects: FC = () => {
             "AWS S3",
             "Python Flask",
           ]}
+          href="/projects/RocketHour-LMS"
         >
           I designed and developed a system used by{" "}
           <a
@@ -77,8 +78,10 @@ const Projects: FC = () => {
         </ProjectCard>
 
         <ProjectCard
+          id="NextInt-Reporting"
+          href="/projects/NextInt-Reporting"
           title="Next Integration Reporting System"
-          imageSrc="https://jonoprest.s3.af-south-1.amazonaws.com/images/next_int_thumbnail.png"
+          imageSrc="https://jonoprest.s3.af-south-1.amazonaws.com/images/next_int/next_int_thumbnail.png"
           techArr={[
             "Python",
             "Pandas",
@@ -104,6 +107,8 @@ const Projects: FC = () => {
         </ProjectCard>
         <ProjectCard
           invert
+          id="LHE"
+          href="/projects/LHE"
           title="Local Healthy Ethical Ordering Platform"
           imageSrc="https://jonoprest.s3.af-south-1.amazonaws.com/images/lhe_landing_pg_thumbnail.png"
           techArr={["React", "Bootstrap", "Redux", "Firebase", "Express.js"]}

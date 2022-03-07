@@ -9,6 +9,8 @@ import CustomButton from "../CustomButton/CustomButton.component";
 // Assets and styling
 import styles from "./ProjectCard.module.css";
 import CustomTag from "../CustomTag/CustomTag.component";
+import Paragraph from "../Typorgraphy/Paragraph.component";
+import Heading3 from "../Typorgraphy/Heading3.component";
 
 interface IProjectCardProps {
   imageSrc: any;
@@ -17,6 +19,7 @@ interface IProjectCardProps {
   customButton?: ReactNode;
   invert?: boolean;
   techArr?: Array<string>;
+  id?: string;
 }
 
 const ProjectCard: FC<IProjectCardProps> = ({
@@ -27,9 +30,11 @@ const ProjectCard: FC<IProjectCardProps> = ({
   customButton,
   title,
   techArr,
+  id,
 }) => {
   return (
     <div
+      id={id}
       className={
         "bg-white drop-shadow-xl w-full  h-256 my-10 flex flex-col items-center lg:w-11/12 lg:h-128 lg:flex-row  max-h-screen rounded-3xl " +
         styles.projectCardContainer
@@ -51,7 +56,7 @@ const ProjectCard: FC<IProjectCardProps> = ({
         />
       </div>
       <div className="order-2 w-full h-full p-10 flex flex-col justify-center items-start grow">
-        <h1 className="text-5xl font-medium">{title}</h1>
+        <Heading3>{title}</Heading3>
         {techArr && (
           <div className="mt-8 flex flex-wrap gap-2">
             <h5 className="text-gray-400 font-bold">TECH:</h5>
@@ -62,7 +67,7 @@ const ProjectCard: FC<IProjectCardProps> = ({
             ))}
           </div>
         )}
-        <p className="my-8 text-gray-400 text-lg">{children}</p>
+        <Paragraph>{children}</Paragraph>
         {customButton ? (
           customButton
         ) : (

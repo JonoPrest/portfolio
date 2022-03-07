@@ -14,7 +14,7 @@ const NavBar: FC = () => {
       <div className="block lg:hidden">
         <button
           onClick={() => setExpanded((prev) => !prev)}
-          className="flex items-center px-3 py-2 border rounded text-black-200 border-black-400 hover:text-gray-400 "
+          className="flex items-center px-3 py-2 rounded text-black-200 hover:text-gray-400 "
         >
           <svg
             className="fill-current h-3 w-3"
@@ -26,20 +26,20 @@ const NavBar: FC = () => {
           </svg>
         </button>
       </div>
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end ">
+      <div className="w-full flex flex-grow lg:flex lg:items-center lg:w-auto justify-end ">
         <div className={"text-sm lg:block" + (expanded ? "" : " hidden")}>
-          <Link href="/">
-            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow mr-4">
+          <Link href="/about">
+            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow  hover:border-b border-black mr-4">
               About
             </a>
           </Link>
           <Link href="/#projects">
-            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow mr-4">
+            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow  hover:border-b border-black mr-4">
               Projects
             </a>
           </Link>
           <Link href="/contact">
-            <a className="block mt-4 lg:inline-block lg:mt-0 hover:drop-shadow">
+            <a className="block mt-4 lg:inline-block lg:mt-0  hover:border-b border-black hover:drop-shadow">
               Contact
             </a>
           </Link>
