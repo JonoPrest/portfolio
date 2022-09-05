@@ -10,14 +10,18 @@ const Tech: FC = () => {
       id="tech-section"
       className="w-full  flex  justify-center lg:justify-start"
     >
-      <div className="max-w-4xl mt-20 xl:ml-20 lg:ml-10">
+      <div className="max-w-4xl mt-20 xl:ml-20 lg:ml-10 px-2">
         <h5 className="text-gray-400 font-bold">TECH I&apos;M USING</h5>
         <div className="my-4 flex flex-wrap gap-1">
           {[
             "React",
             "Redux",
             "TypeScript",
+            "Solidity",
+            "Rescript",
             "JavaScript",
+            "Foundry",
+            "Hardhat",
             "HTML",
             "CSS/SCSS",
             "Next.js",
@@ -42,12 +46,13 @@ const Tech: FC = () => {
             "Firebase",
             "Firestore",
             "Realtime DB",
-            "Authentication",
-            "Google Cloud Functions",
+            "Firebase Authentication",
             "SQL",
             "GraphQL",
+            "Google Cloud Functions",
             "Webpack",
             "Parcel",
+            "Git",
           ].map((item, i) => (
             <CustomTag color="gray" key={i}>
               {item}

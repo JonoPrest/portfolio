@@ -3,6 +3,7 @@ import React, { FC } from "react";
 
 // Components
 import CustomButton from "../CustomButton/CustomButton.component";
+import CustomLink from "../CustomLink/CustomLink";
 import ProjectCard from "../ProjectCard/ProjectCard.component";
 import Heading1 from "../Typorgraphy/Heading1.component";
 
@@ -42,9 +43,7 @@ const Projects: FC = () => {
           The website you are currently looking at is a server side rendered
           Next.js application written in TypeScript and Tailwind CSS. It
           contains an API for managing the email handling on the contact page.
-          It is running in a docker container and it is currently being served
-          to you via an EC2 instance on AWS. Take a look at the source code on
-          GitHub.
+          Take a look at the source code on GitHub.
         </ProjectCard>
         <ProjectCard
           id="RocketHour-LMS"
@@ -63,14 +62,9 @@ const Projects: FC = () => {
           href="/projects/RocketHour-LMS"
         >
           I developed a system used by{" "}
-          <a
-            className="text-blue-600"
-            href="https://thinkcamp.co.za/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <CustomLink href="https://thinkcamp.co.za/" openInNewTab>
             ThinkCamp.co.za
-          </a>
+          </CustomLink>
           {`'`}s Online Code Tutoring platform for children and teens called
           &quot;RocketHour&quot;. The RocketHour &quot;LaunchPad&quot; is a
           custom Learning Management System that is geared towards teaching a
@@ -94,14 +88,9 @@ const Projects: FC = () => {
           ]}
         >
           I designed and developed a system for{" "}
-          <a
-            className="text-blue-600"
-            href="http://nextint.co.za/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Next Integration{" "}
-          </a>
+          <CustomLink href="http://nextint.co.za/" openInNewTab>
+            Next Integration
+          </CustomLink>{" "}
           that interfaces with a number of machines on a cement mixing plant. It
           queries multiple databases, performs data cleaning, and merges them
           into single dataframe where it gets summariesd. It then gets marked up
@@ -116,14 +105,9 @@ const Projects: FC = () => {
           techArr={["React", "Bootstrap", "Redux", "Firebase", "Express.js"]}
         >
           I designed and developed a platform for{" "}
-          <a
-            className="text-blue-600"
-            href="https://localhealthyethical.co.za/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Local Healthy Ethical{" "}
-          </a>
+          <CustomLink href="https://localhealthyethical.co.za/" openInNewTab>
+            Local Healthy Ethical
+          </CustomLink>{" "}
           to automate the collection of members&apos; orders through a sign in
           shop, and for administrators to place orders with distributors. It
           also provides an interface to generate and edit invoices send to

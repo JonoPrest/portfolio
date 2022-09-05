@@ -7,6 +7,7 @@ import CustomButton from "../CustomButton/CustomButton.component";
 import SplashImage from "../SplashImage/SpalshImage.component";
 import Paragraph from "../Typorgraphy/Paragraph.component";
 import Heading2 from "../Typorgraphy/Heading2.component";
+import CustomLink from "../CustomLink/CustomLink";
 
 const Header: FC = () => {
   return (
@@ -29,6 +30,12 @@ const Header: FC = () => {
             When I&apos;m not writing code or playing music, you can find me
             adventuring in the outdoors - be it hiking, camping, motorcycling,
             trail running or rock-climbing.
+          </Paragraph>
+          <Paragraph className="max-w-md">
+            Currently working in the Web3 space with{" "}
+            <CustomLink href="https://float.capital" openInNewTab>
+              float.capital
+            </CustomLink>
           </Paragraph>
 
           <div>
