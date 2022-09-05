@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import BackButton from "../../components/BackButton/BackButton";
 
 // Components
 import Footer from "../../components/Footer/Footer.component";
@@ -24,12 +25,7 @@ const RocketHour: NextPage = () => {
       </Head>
       <NavBar />
 
-      <Link href="/#LHE">
-        <a className="relative mb-8 flex left-6 lg:left-20 top-32 hover:drop-shadow">
-          <ChevronLeft />
-          <span>BACK</span>
-        </a>
-      </Link>
+      <BackButton previousUrl="/#LHE" />
       <Heading1>Local Healthy Ethical</Heading1>
       <main className="flex flex-col items-center max-w-6xl mt-8 m-auto bg-white drop-shadow-xl">
         <div className="relative w-full h-128 grow">

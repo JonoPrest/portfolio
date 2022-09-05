@@ -2,12 +2,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 
 // Components
 import Footer from "../../components/Footer/Footer.component";
-import ChevronLeft from "../../components/Icons/ChevronLeft.componet";
 import NavBar from "../../components/NavBar/NavBar.component";
+import BackButton from "../../components/BackButton/BackButton";
 import Heading1 from "../../components/Typorgraphy/Heading1.component";
 import Paragraph from "../../components/Typorgraphy/Paragraph.component";
 
@@ -21,12 +20,7 @@ const NextInt: NextPage = () => {
       </Head>
       <NavBar />
 
-      <Link href="/#NextInt-Reporting">
-        <a className="relative mb-8 flex left-6 lg:left-20 top-32 hover:drop-shadow">
-          <ChevronLeft />
-          <span>BACK</span>
-        </a>
-      </Link>
+      <BackButton previousUrl="/#NextInt-Reporting" />
       <Heading1>Next Integration Reporting</Heading1>
       <main className="flex flex-col items-center max-w-6xl mt-8 m-auto bg-white drop-shadow-xl">
         <div className="relative flex flex-col lg:flex-row">

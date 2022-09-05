@@ -2,20 +2,19 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 
 // Components
 import CustomButton from "../components/CustomButton/CustomButton.component";
 import Footer from "../components/Footer/Footer.component";
 import FormInput from "../components/FormInput/FormInput.component";
 import NavBar from "../components/NavBar/NavBar.component";
+import BackButton from "../components/BackButton/BackButton";
 import Heading1 from "../components/Typorgraphy/Heading1.component";
 
 // Icons
 import Spinner from "../components/Spinner/Spinner.component";
 import Tick from "../components/Icons/Tick.component";
 import Cancel from "../components/Icons/Cancel.component";
-import ChevronLeft from "../components/Icons/ChevronLeft.componet";
 
 // API funciton calls
 import { emailMessageRequestData } from "./api/send-email";
@@ -80,12 +79,7 @@ const Home: NextPage = () => {
       </Head>
 
       <NavBar />
-      <Link href="/">
-        <a className="relative mb-8 flex left-6 lg:left-20 top-32 hover:drop-shadow">
-          <ChevronLeft />
-          <span>BACK</span>
-        </a>
-      </Link>
+      <BackButton previousUrl="/" />
       <Heading1>Contact Me</Heading1>
       <main className="top-0 pb-10">
         <div className="flex justify-center w-full p-6">
