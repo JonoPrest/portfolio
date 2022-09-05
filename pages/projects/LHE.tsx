@@ -2,13 +2,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
-import BackButton from "../../components/BackButton/BackButton";
 
 // Components
 import Footer from "../../components/Footer/Footer.component";
-import ChevronLeft from "../../components/Icons/ChevronLeft.componet";
 import NavBar from "../../components/NavBar/NavBar.component";
+import BackButton from "../../components/BackButton/BackButton";
 import Heading1 from "../../components/Typorgraphy/Heading1.component";
 import Paragraph from "../../components/Typorgraphy/Paragraph.component";
 
